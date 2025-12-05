@@ -1,0 +1,16 @@
+{
+  "name": "order-management-system",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm install --workspaces",
+    "dev": "concurrently \"npm:dev --workspace backend\" \"npm:dev --workspace frontend\"",
+    "start:db": "docker-compose up -d"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
