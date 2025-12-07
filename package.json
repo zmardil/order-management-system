@@ -9,6 +9,7 @@
     "install:all": "npm install --workspaces",
     "dev": "concurrently \"npm:dev --workspace backend\" \"npm:dev --workspace frontend\"",
     "start:db": "docker-compose up -d"
+    ,"prisma:generate":"npm --prefix backend run prisma:generate"
   },
   "devDependencies": {
     "concurrently": "^8.2.0"
